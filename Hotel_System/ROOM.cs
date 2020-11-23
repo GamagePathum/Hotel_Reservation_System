@@ -24,6 +24,20 @@ namespace Hotel_System
             return table;
         }
 
+        public DataTable roomByType(int type)
+        {
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `rooms` WHERE `type`=@typ", conn.getConnection());
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            DataTable table = new DataTable();
+
+            command.Parameters.Add("@typ", MySqlDbType.Int32).Value = type;
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            return table;
+        }
+
         public bool addRooms(int number,int type,String phone,String free)
         {
             MySqlCommand command = new MySqlCommand();
