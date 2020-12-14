@@ -133,7 +133,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Hotel_System.Properties.Resources.my;
+            this.pictureBox1.Image = global::Hotel_System.Properties.Resources.my1;
             this.pictureBox1.Location = new System.Drawing.Point(151, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(137, 122);
